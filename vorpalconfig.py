@@ -14,11 +14,11 @@ MONGODB_DICT_DEL_DISTANCES = "dgd_data"
 
 #set to logging.INFO to enable verbose mode
 #set to logging.CRITICAL to disable verbose mode
-loggingLevel = logging.INFO 
+loggingLevel = logging.CRITICAL
 
 #Set to True to enable log throttling 
 #(pausing the first 3 times a log event occurs)
-throttling = True
+throttling = False
 
 
 #Dictionary location

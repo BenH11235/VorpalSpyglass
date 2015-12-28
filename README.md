@@ -9,19 +9,19 @@ This setup makes preventing malware from communicating with its C&C server more 
 For this reason, it is worthwhile to detect DGA traffic automatically. Instead of taking shots in the dark, the journey of shutting down the DGA infrastructure can begin with a helpful pointing finger towards the culprit sample. Further, automatic detection can also lead to blocking the DGA traffic right there and then - though this introduces issues of performance, and generally the implementation here was not geared toward this use case. Finally, automatic detection of DGA can serve to determine a single feature as a part of a wider-scale automatic analysis effort.
 
 Vorpal Spyglass relies on three features in order to attempt classification of traffic as either contaminated with, or clean of, DGA:
-1. The maximum number of DNS requests that mapped to the same result (either an IP address or an NXDOMAIN)
-2. Among the longest 10 of the request domains: Average bigram inverse-log-probability
-3. Among the longest 10 of the request domains: Average approximation of distance from domain name to concatenation of dictionary words
+* The maximum number of DNS requests that mapped to the same result (either an IP address or an NXDOMAIN)
+* Among the longest 10 of the request domains: Average bigram inverse-log-probability
+* Among the longest 10 of the request domains: Average approximation of distance from domain name to concatenation of dictionary words
 
 Experimentally, different classifiers based on these features have produced different results. So far, the best results seem to follow from using a decision tree algorithm with hand-tuned parameters based on human analysis of Training PCAPs.
 
 ## Installation
 
 Vorpal Spyglass requires the following to operate:
-1. [Python3](http://python.org)
-2. [numpy](http://numpy.org)
-3. [pyshark](https://github.com/KimiNewt/pyshark) (Requires a working installation of [tshark](https://www.wireshark.org/docs/wsug_html_chunked/AppToolstshark.html))
-4. [pymongo](https://api.mongodb.org/python/current/) (Requires a working installation of [mongodb](https://www.mongodb.org/))
+* [Python3](http://python.org)
+* [numpy](http://numpy.org)
+* [pyshark](https://github.com/KimiNewt/pyshark) (Requires a working installation of [tshark](https://www.wireshark.org/docs/wsug_html_chunked/AppToolstshark.html))
+* [pymongo](https://api.mongodb.org/python/current/) (Requires a working installation of [mongodb](https://www.mongodb.org/))
 
 Clone the repository to your local directory of choice by running git from the command line:
 
