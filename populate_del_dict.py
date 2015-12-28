@@ -6,6 +6,9 @@ from gutenberg_freqtable import canonize
 import vorpalconfig
 
 
+print("Deletions dictionary builder started.")
+print("Go do something productive with your life now.")
+print("This is going to take a while.")
 with open(vorpalconfig.dictionaryLocation,"r") as fh:
     for word in fh.read().split('\n'):
         for deriv in delDerivs(canonize(word)).items():
