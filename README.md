@@ -1,4 +1,4 @@
-Contributed By Check Point Software Technologies LTD.
+Contributed By Check Point Software Technologies LTD. As seen at 32C3.
 
 # Vorpal Spyglass
 
@@ -33,7 +33,7 @@ Alternately, download a zip of the source code via HTTP: click [here](https://gi
 
 Make sure that the server address and port in vorpalconfig.py are correct for your instance of mongodb. 
 
-Run populate_del_dict.py and wait 24 hours for the dictionary to be populated (No, I'm not kidding). There is ongoing work to provide a quicker means of obtaining the deletions dictionary.
+Run populate_del_dict.py and wait 24 hours for the dictionary to be populated (yes, seriously). We toyed a few times with an alternate approach that would cut down the generation time by using a tweaked variation of a Bloom filter, but ultimately were not able to get a PoC to work. 
 
 ## Usage
 
